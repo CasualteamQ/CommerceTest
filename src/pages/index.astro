@@ -1,0 +1,31 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Login from '../components/Login.astro';
+---
+
+<Layout title="Perfumes del Mundo">
+	<main class="max-sm:hidden">
+		<Header></Header>
+		<ViewTransitions />
+	</main>
+	
+	<div class="max-sm:hidden absolute mx-[1800px] -mt-16">
+		<Login/>
+	</div>
+	<nav class="max-sm:hidden text-2xl">
+		<Navbar/>
+	</nav>
+	<div class="max-sm:-mt-[1020px] max-sm:absolute my-24">
+
+		<Hero/>
+	</div>
+
+</Layout>
+
+
+

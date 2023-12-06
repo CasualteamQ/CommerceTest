@@ -1,0 +1,55 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import { ViewTransitions } from "astro:transitions";
+import Card from "../components/Card.astro";
+---
+<Layout title="Perfumes del Mundo">
+    <ViewTransitions />
+    <main class="max-sm:hidden">
+		<Header></Header>
+	</main>
+	
+	
+	<nav class="max-sm:hidden text-2xl">
+		<Navbar/>
+	</nav>
+	
+    <h1>Productos</h1>
+	
+	<ul role="list" class="link-card-grid grid grid-cols-4 gap-12 m-48 p-4">
+		<li>
+
+			<Card 
+			href="https://docs.astro.build/"
+			image="https://img.freepik.com/free-photo/front-view-fragrance-bottle-transparent-white-floor_140725-11635.jpg?t=st=1701883401~exp=1701884001~hmac=ff6ee55c49ebd307641f325f8916a1678781aed960699de19352bdac72ed2ae3"
+			title="Perfume N°1"
+			body="Coso de perfume"
+			price="$500"
+			 />
+		</li>
+		<li>
+
+			<Card 
+			href="https://docs.astro.build/"
+			image="https://img.freepik.com/free-photo/front-view-fragrance-bottle-transparent-white-floor_140725-11635.jpg?t=st=1701883401~exp=1701884001~hmac=ff6ee55c49ebd307641f325f8916a1678781aed960699de19352bdac72ed2ae3"
+			title="Perfume N°3"
+			body="Coso de perfume"
+			price="$500"
+			 />
+		</li>
+		<li>
+			<Card 
+			href="https://docs.astro.build/"
+			image="https://img.freepik.com/free-photo/front-view-expensive-fragnance-dark-background-color-perfume-gift-present-love-couple-marriage-feeling-scent_140725-158065.jpg?w=740&t=st=1701883626~exp=1701884226~hmac=6d1227b95b29b17ece566042647ce0ae1be39356b2e8346912e9d76c1df284d9"
+			title="Perfume N°3"
+			body="Perfume de la concha de la lora, de lo rico que es!"
+			price="$500"
+			 />
+		</li>
+
+
+
+	</ul>
+</Layout>

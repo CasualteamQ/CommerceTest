@@ -1,0 +1,36 @@
+---
+
+import Sidebar from '../components/Sidebar.astro';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import { ViewTransitions } from 'astro:transitions';
+---
+
+<!doctype html>
+<html lang="es">
+	<head >
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href='./perfume2.png' />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:ital,wght@0,100;0,200;0,400;1,100;1,200;1,400&display=swap" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<link href="main.css" rel="stylesheet"/>
+		<title>{title}</title>
+		
+	</head>
+	<body transition:animate="fade">
+		<div class="2xl:hidden xl:hidden md:hidden">
+			<Sidebar/>
+
+		</div>
+		<slot />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+	</body>
+</html>
