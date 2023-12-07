@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { ViewTransitions } from 'astro:transitions';
 import Header from '../components/Header.astro';
 import Navbar from '../components/Navbar.astro';
-import Feature from '../components/Feature.astro'
+import CartContain from '../components/CartContain.astro'
 
 
 ---
@@ -20,14 +20,7 @@ import Feature from '../components/Feature.astro'
 		<Navbar/>
 	</nav>
 	
-    <h1>Producto</h1>
-    <Feature
-            id={1}
-            href="/producto"
-			image="https://img.freepik.com/free-photo/front-view-fragrance-bottle-transparent-white-floor_140725-11635.jpg?t=st=1701883401~exp=1701884001~hmac=ff6ee55c49ebd307641f325f8916a1678781aed960699de19352bdac72ed2ae3"
-			title="Perfume N°1"
-			body="Coso de perfume"
-			price="$500"/>
-           
+    <h1>Carrito</h1>
+    <CartContain/>
             
 </Layout>
